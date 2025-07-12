@@ -8,79 +8,137 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --violeta: #a100ff;
+      --violeta-claro: #c060ff;
+      --gris-oscuro: #2e2e2e;
+      --gris-medio: #444;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
-      background-color: #2e2e2e;
-      color: #f5f5f5;
+      background-color: var(--gris-oscuro);
+      color: var(--blanco);
+      line-height: 1.6;
     }
+
     header {
-      background: linear-gradient(rgba(161, 0, 255, 0.8), rgba(161, 0, 255, 0.8)), url('images/header-bg.jpg') center/cover no-repeat;
-      padding: 4rem 2rem;
+      background: linear-gradient(rgba(161, 0, 255, 0.7), rgba(44, 0, 75, 0.9)), url('images/header-bg.jpg') center/cover no-repeat;
+      padding: 5rem 2rem 6rem;
       text-align: center;
+      box-shadow: inset 0 -10px 40px rgba(0,0,0,0.6);
     }
+
     header img {
-      max-width: 150px;
+      max-width: 180px;
+      margin-bottom: 1.2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--blanco);
       margin-bottom: 1rem;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-      color: #fff;
-    }
+
     header p {
       font-size: 1.2rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
+      color: #e6d9f5;
     }
+
     section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
+      padding: 5rem 2rem;
+      max-width: 1200px;
       margin: auto;
     }
+
     section h2 {
       text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #a100ff;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: var(--violeta);
     }
+
     .features {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
+
     .feature {
-      background-color: #3c3c3c;
-      border-left: 4px solid #a100ff;
-      padding: 1.5rem;
-      border-radius: 8px;
+      background: linear-gradient(to bottom right, #3c3c3c, #2e2e2e);
+      border-left: 6px solid var(--violeta);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(161, 0, 255, 0.2);
+    }
+
     .feature h3 {
-      margin-top: 0;
-      color: #a100ff;
+      color: var(--violeta-claro);
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
     }
+
+    .feature p {
+      color: #d7d7d7;
+    }
+
     footer {
       text-align: center;
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       background-color: #1f1f1f;
+      border-top: 4px solid var(--violeta);
     }
+
     footer h3 {
-      font-size: 1.5rem;
-      color: #a100ff;
+      font-size: 1.8rem;
+      color: var(--violeta);
     }
-    footer p {
-      margin: 1rem 0;
-    }
+
     .contact-info {
       margin: 2rem 0;
       font-size: 1rem;
-      line-height: 1.6;
+      line-height: 1.8;
     }
-    .socials a {
-      margin: 0 0.5rem;
-      color: #a100ff;
-      font-size: 1.4rem;
+
+    .contact-info a {
+      color: var(--violeta-claro);
       text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .socials a {
+      margin: 0 0.7rem;
+      color: var(--violeta);
+      font-size: 1.6rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--violeta-claro);
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 2rem;
     }
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -114,7 +172,7 @@
   <footer>
     <h3>Contactanos</h3>
     <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:admin@valcgroup.com" style="color:#f5f5f5; text-decoration:underline;">admin@valcgroup.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:admin@valcgroup.com">admin@valcgroup.com</a></p>
       <p><strong>España:</strong> +34 621 353 977<br />
          <strong>Argentina:</strong> +54 9 376 433 6762</p>
     </div>
@@ -122,7 +180,9 @@
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-x-twitter"></i></a>
     </div>
-    <p style="margin-top:2rem; font-size:0.9rem; color:#888">&copy; Valc Group LLC. Todos los derechos reservados.</p>
+    <div class="copyright">
+      &copy; Valc Group LLC. Todos los derechos reservados.
+    </div>
   </footer>
 </body>
 </html>
