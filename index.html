@@ -1,126 +1,190 @@
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Valc Group LLC</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #2e2e2e;
-        }
-        #header {
-            background-image: url('images/header-bg.jpg');
-            background-color: #a100ff;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-blend-mode: multiply;
-            text-align: center;
-            padding-top: 3em;
-        }
-        #header img {
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 1em;
-        }
-        .container, .box, .feature, section, footer {
-            background-color: transparent !important;
-            color: #2e2e2e;
-        }
-        a.button {
-            background-color: #a100ff;
-            border: none;
-        }
-        a.button:hover {
-            background-color: #8700d1;
-        }
-        #footer {
-            background: linear-gradient(to bottom, #a100ff, #000);
-        }
-        #footer h2, #footer p, #footer a, #footer li {
-            color: #ffffff !important;
-        }
-    </style>
-</head>
-<body class="is-preload">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valc Group LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --violeta: #a100ff;
+      --violeta-claro: #c060ff;
+      --gris-oscuro: #2e2e2e;
+      --gris-medio: #444;
+      --blanco: #ffffff;
+    }
 
-<!-- Header -->
-<div id="header">
-    <img src="images/logo.png" alt="Valc Group Logo" />
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--blanco);
+      color: var(--gris-oscuro);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(161, 0, 255, 0.7), rgba(44, 0, 75, 0.9)), url('images/header-bg.jpg') center/cover no-repeat;
+      padding: 5rem 2rem 6rem;
+      text-align: center;
+      box-shadow: inset 0 -10px 40px rgba(0,0,0,0.2);
+      color: var(--blanco);
+    }
+
+    header img {
+      max-width: 180px;
+      margin-bottom: 1.2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #f0e5fc;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: var(--violeta);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature {
+      background-color: #f9f9f9;
+      border-left: 6px solid var(--violeta);
+      padding: 2rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(161, 0, 255, 0.15);
+    }
+
+    .feature h3 {
+      color: var(--violeta);
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .feature p {
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(to bottom, var(--violeta), #000);
+      border-top: 4px solid var(--violeta);
+    }
+
+    footer h3 {
+      font-size: 1.8rem;
+      color: var(--blanco);
+    }
+
+    .contact-info {
+      margin: 2rem 0;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--blanco);
+    }
+
+    .contact-info a {
+      color: var(--violeta);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .socials a {
+      margin: 0 0.7rem;
+      color: var(--violeta);
+      font-size: 1.6rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--violeta-claro);
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-top: 2rem;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Valc Group Logo">
     <h1>Valc Group LLC</h1>
     <p>Desarrollamos estrategias de intercambio de activos y acompañamiento financiero con una visión global y sostenible.</p>
-</div>
+  </header>
 
-<!-- Main -->
-<div id="main">
-
-    <header class="major container medium">
-        <h2>Impulsamos decisiones financieras inteligentes<br />
-        con impacto internacional y enfoque sostenible</h2>
-    </header>
-
-    <div class="box alt container">
-        <section class="feature left">
-            <a href="#" class="image icon solid fa-signal"><img src="images/pic01.jpg" alt="" /></a>
-            <div class="content">
-                <h3>Estrategia de Intercambio Inteligente</h3>
-                <p>Analizamos mercados, divisas y activos digitales para diseñar movimientos de intercambio eficientes que maximizan oportunidades y reducen riesgos.</p>
-            </div>
-        </section>
-        <section class="feature right">
-            <a href="#" class="image icon solid fa-code"><img src="images/pic02.jpg" alt="" /></a>
-            <div class="content">
-                <h3>Acompañamiento Global</h3>
-                <p>Trabajamos junto a nuestros clientes en cada paso, brindando asesoramiento estratégico con perspectiva internacional y soluciones adaptadas a cada entorno financiero.</p>
-            </div>
-        </section>
-        <section class="feature left">
-            <a href="#" class="image icon solid fa-leaf"><img src="images/pic03.jpg" alt="" /></a>
-            <div class="content">
-                <h3>Sostenibilidad Financiera</h3>
-                <p>Integramos prácticas responsables que fortalecen decisiones financieras duraderas, respetando tanto los objetivos del cliente como los desafíos del entorno económico actual.</p>
-            </div>
-        </section>
+  <section>
+    <h2>Visión Financiera Global</h2>
+    <p style="text-align:center; max-width:700px; margin: 0 auto 3rem;">Impulsamos decisiones financieras inteligentes con impacto internacional y enfoque sostenible.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Estrategia de Intercambio Inteligente</h3>
+        <p>Analizamos mercados, divisas y activos digitales para diseñar movimientos de intercambio eficientes que maximizan oportunidades y reducen riesgos.</p>
+      </div>
+      <div class="feature">
+        <h3>Acompañamiento Global</h3>
+        <p>Brindamos asesoramiento estratégico con perspectiva internacional, acompañando a nuestros clientes en cada paso del camino.</p>
+      </div>
+      <div class="feature">
+        <h3>Sostenibilidad Financiera</h3>
+        <p>Aplicamos prácticas responsables que fortalecen decisiones financieras duraderas, alineadas con los desafíos económicos actuales.</p>
+      </div>
     </div>
+  </section>
 
-    <footer class="major container medium">
-        <h3>¿Listos para evolucionar financieramente?</h3>
-        <p>Conectá con nuestro equipo y descubrí cómo Valc Group puede potenciar tu estrategia patrimonial a nivel internacional.</p>
-        <ul class="actions special">
-            <li><a href="mailto:admin@valcgroup.com" class="button">Contactanos</a></li>
-        </ul>
-    </footer>
-</div>
-
-<!-- Footer -->
-<div id="footer">
-    <div class="container medium">
-        <header class="major last">
-            <h2>¿Tenés una consulta o querés colaborar?</h2>
-        </header>
-        <p><strong>Email:</strong> <a href="mailto:admin@valcgroup.com">admin@valcgroup.com</a></p>
-        <p><strong>España:</strong> +34 621 353 977<br />
-        <strong>Argentina:</strong> +54 9 376 433 6762</p>
-        <ul class="icons">
-            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            <li><a href="#" class="icon brands fa-x-twitter"><span class="label">X</span></a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; Valc Group LLC. Todos los derechos reservados.</li>
-            <li>Diseño: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
+  <footer>
+    <h3>Contactanos</h3>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:admin@valcgroup.com">admin@valcgroup.com</a></p>
+      <p><strong>España:</strong> +34 621 353 977<br />
+         <strong>Argentina:</strong> +54 9 376 433 6762</p>
     </div>
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-
+    <div class="socials">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <div class="copyright">
+      &copy; Valc Group LLC. Todos los derechos reservados.
+    </div>
+  </footer>
 </body>
 </html>
