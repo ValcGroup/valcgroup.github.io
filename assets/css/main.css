@@ -2706,10 +2706,14 @@ input, select, textarea {
 
 	#header {
 		background-attachment: scroll,							scroll,					fixed;
-		background-image: linear-gradient(rgba(161, 0, 255, 0.75), rgba(0, 0, 0, 0.85)), url("images/header-bg.jpg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		background-image: 
+			linear-gradient(to bottom, rgba(161, 0, 255, 0.7), rgba(0, 0, 0, 0.8)), /* NUEVO DEGRADADO */
+			url("images/top-3200.svg"), 
+			url("images/overlay.png"), 
+			url("../../images/header.jpg");
+		background-position: bottom center, top left, center center;
+		background-repeat: repeat-x, repeat, no-repeat;
+		background-size: 3200px 460px, auto, cover;
 		color: rgba(255, 255, 255, 0.8);
 		padding: 10em 0 20em 0;
 		position: relative;
